@@ -214,6 +214,16 @@
             color: var(--dark-color);
         }
         
+        .tool-card-content h3 a {
+            color: var(--dark-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .tool-card-content h3 a:hover {
+            color: var(--primary-color);
+        }
+        
         .tool-card-content p {
             color: #666;
             margin-bottom: 1rem;
@@ -221,18 +231,30 @@
         }
         
         .tool-card-content a {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             background: var(--primary-color);
             color: white;
             padding: 8px 16px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 500;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        
+        .tool-card-content a::after {
+            content: '→';
+            font-size: 0.9em;
+            transition: transform 0.3s ease;
         }
         
         .tool-card-content a:hover {
             background: var(--secondary-color);
+        }
+        
+        .tool-card-content a:hover::after {
+            transform: translateX(3px);
         }
         
         .category-tabs {
@@ -530,19 +552,19 @@
             </div>
             
             <div class="tools-grid">
-                <!-- Tool Card 1 -->
+                <!-- Tool Card 1 - Image Compressor -->
                 <div class="tool-card">
                     <div class="tool-card-img">
-                        <div>
-                    <img src="https://images.unsplash.com/photo-1620287341715-e6e7e6a69724?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Image Compressor">
-                  </div>
-              <div class="tool-card-content">
-              <h3>Image Compressor</h3>
-              <p>Reduce image file size without losing quality. Supports JPG, PNG, GIF, and more.</p>
-              <a href="/CTools/imgs-compressed.html" target="_blank">Use Tool</a>
-              </div>
-
-               <!-- Tool Card 2 -->
+                        <img src="https://images.unsplash.com/photo-1620287341715-e6e7e6a69724?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Image Compressor">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3><a href="CTools/imgs-compressed.html">Image Compressor</a></h3>
+                        <p>Reduce image file size without losing quality. Supports JPG, PNG, GIF, and more.</p>
+                        <a href="CTools/imgs-compressed.html">Use Tool</a>
+                    </div>
+                </div>
+                
+                <!-- Tool Card 2 -->
                 <div class="tool-card">
                     <div class="tool-card-img">
                         <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="PDF Merger">
